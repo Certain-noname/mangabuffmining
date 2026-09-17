@@ -82,7 +82,7 @@ html, body {
             transition: background-color 0.5s;
         }
 
-        #oresNumberInput {
+        #oresNumberInputBox {
             grid-area: buttonBox; 
             display: none; 
             flex-direction: column; 
@@ -91,7 +91,7 @@ html, body {
             gap: 4.2cqh;
         }
         
-        input {
+        #oresNumberInput {
             height: 35%; 
             justify-self: center; 
             width: 80%; 
