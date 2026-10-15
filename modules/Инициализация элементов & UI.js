@@ -45,17 +45,14 @@ startMiningButton.innerText = "Копать!⛏️";
 
 textArea.style = "line-height: normal;" /*фиксим приколы разметки mangabuff*/
 
-const pacman = document.createElement('svg');
-pacman.innerHTML = `
-  <path class="runningPacman" d="M9.3,27.4L9.3,27.4c0.7,0.7,1.9,0.7,2.7,0l0,0c0.7-0.7,1.9-0.7,2.7,0l0,0c0.7,0.7,1.9,0.7,2.7,0l0,0 c0.7-0.7,1.9-0.7,2.7,0l0,0c0.7,0.7,1.9,0.7,2.7,0l0,0c0.7-0.7,1.9-0.7,2.7,0l0.7,0.6V13c0-5.5-4.5-10-10-10h0C10.5,3,6,7.5,6,13 v15.1l0.7-0.6C7.4,26.7,8.6,26.7,9.3,27.4z"/>
-  <line class="runningPacman" x1="12" y1="12" x2="12" y2="16"/>
-  <line class="runningPacman" x1="19" y1="12" x2="19" y2="16"/>
-  <line class="runningPacman" x1="12" y1="20" x2="20" y2="20"/>
-`;
-Object.assign(pacman, {
-    class: "runningPacman", 
-    viewBox: "0 0 32 32",
-}); 
+askBar.insertAdjacentHTML('afterbegin', `
+  <svg id="pacman">
+    <path class="runningPacman" d="M9.3,27.4L9.3,27.4c0.7,0.7,1.9,0.7,2.7,0l0,0c0.7-0.7,1.9-0.7,2.7,0l0,0c0.7,0.7,1.9,0.7,2.7,0l0,0 c0.7-0.7,1.9-0.7,2.7,0l0,0c0.7,0.7,1.9,0.7,2.7,0l0,0c0.7-0.7,1.9-0.7,2.7,0l0.7,0.6V13c0-5.5-4.5-10-10-10h0C10.5,3,6,7.5,6,13 v15.1l0.7-0.6C7.4,26.7,8.6,26.7,9.3,27.4z"/>
+    <line class="runningPacman" x1="12" y1="12" x2="12" y2="16"/>
+    <line class="runningPacman" x1="19" y1="12" x2="19" y2="16"/>
+    <line class="runningPacman" x1="12" y1="20" x2="20" y2="20"/>
+  </svg>
+`); 
 
 Object.assign(oresNumberInput, {
     placeholder: "Введите целевое значение руды", 
