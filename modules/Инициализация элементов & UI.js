@@ -63,7 +63,7 @@ Object.assign(oresNumberInput, {
 askBarGrid.append(textArea, buttonBox, oresNumberInputBox);
 buttonBox.append(buttonBoxY, buttonBoxN);
 oresNumberInputBox.append(oresNumberInput, startMiningButton);
-askBar.append(pacman, askBarGrid);
+askBar.appendChild(askBarGrid);
 document.body.prepend(askBar);
 
 // ==========================================
