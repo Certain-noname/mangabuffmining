@@ -59,8 +59,16 @@ const pickaxeBox = document.getElementsByClassName('pickaxeBox'); //Уже об�
 const pickaxeWhite = document.createElement('img');
 const pickaxeBlack = document.createElement('img');
 
-pickaxeWhite.id = "pickaxeWhite"
-pickaxeBlack.id = "pickaxeBlack"
+Object.assign(pickaxeWhite, {
+    id: "pickaxeWhite",
+    src: "https://cdn.jsdelivr.net/gh/Certain-noname/mangabuffmining/PickaxeWhite.svg"
+    }
+)
+bject.assign(pickaxeBlack, {
+    id: "pickaxeBlack",
+    src: "https://cdn.jsdelivr.net/gh/Certain-noname/mangabuffmining/pickaxeBlack.svg"
+    }
+)
 
 // 2.2. Устанавливаем обработчики событий
 pickaxeBox.addEventListener('mouseover', pickaxeChangeColor);
