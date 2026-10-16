@@ -72,7 +72,7 @@ Object.assign(oresNumberInput, {
     min: "0"
 });
 
-resumeMiningButton.innerHTML = '<img src="https://cdn.jsdelivr.net/gh/Certain-noname/mangabuffmining/Pickaxe.svg" style="height: 100%; width: 100%;" />'
+resumeMiningButton.innerHTML = '<img src="https://cdn.jsdelivr.net/gh/Certain-noname/mangabuffmining/PickaxeWhite.svg" style="height: 100%; width: 100%;" />'
 Object.assign(resumeMiningButton, {onclick: resumeMining})
 
 askBarGrid.append(textArea, buttonBox, oresNumberInputBox);
