@@ -64,7 +64,7 @@ Object.assign(pickaxeWhite, {
     src: "https://cdn.jsdelivr.net/gh/Certain-noname/mangabuffmining/PickaxeWhite.svg"
     }
 )
-bject.assign(pickaxeBlack, {
+Object.assign(pickaxeBlack, {
     id: "pickaxeBlack",
     src: "https://cdn.jsdelivr.net/gh/Certain-noname/mangabuffmining/pickaxeBlack.svg"
     }
