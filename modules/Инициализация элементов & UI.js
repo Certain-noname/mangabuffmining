@@ -45,7 +45,7 @@ buttonBoxN.id = "buttonBox-N";
 oresNumberInputBox.id = "oresNumberInputBox";
 oresNumberInput.id = "oresNumberInput";
 startMiningButton.id = "startMiningButton";
-resumeMiningButton.id="resumeMiningButton"
+resumeMiningButton.className="resumeMiningButton pickaxeBox"
 
 textArea.innerText = "Установить целевой показатель руды?";
 buttonBoxY.innerText = "Нужно!";

@@ -154,25 +154,39 @@ html, body {
     transition: background-color 0.5s, border-radius 0.5s, color 0.5s;
 }
 
-#resumeMiningButton {
+.pickaxeBox, .resumeMiningButton {
             width: 3%;
             aspect-ratio: 1/1;
             position: fixed;
             left: 97%;
             top: 42%;
-            background-color: hsla(0, 0%, 0%, 10%);
+            background-color: black;
+            border-radius: 0px;
+            cursor: pointer;
+            transition: all 1s linear;
+            overflow: hidden;
             display: none;
             justify-content: center;
             align-items: center;
-            transition: background-color 0.5s;
+        }
 
-        }
-        
-        #resumeMiningButton:hover, #resumeMiningButton:active {
-            background-color: hsla(0, 0%, 0%, 20%);
-            cursor: pointer;
-            transition: background-color 0.5s;
-        }
+/* Абсолютное позиционирование накладывает картинки ровно друг на друга */
+#pickaxeBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s linear; /* Плавная смена прозрачности для ОБЕИХ картинок */
+}
+
+#pickaxeWhite {
+    opacity: 1;
+}
+
+#pickaxeBlack {
+    opacity: 0;
+}
 
 #pacman, .runningPacman {
     width: 10cqw;
