@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+#askBar {
+    display: flex; 
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%; 
+    z-index: 999; 
+    justify-content: center; 
+    align-items: center;
+    background-color: hsla(0, 0%, 0%, 0.6);
+}
+
+#askBarGrid {
+    width: 60%;
+    aspect-ratio: 2/1.2;
+    background-color: rgb(0, 0, 0);
+    display: grid;
+    grid-template-rows: 5% 45% 40% 10%; 
+    grid-template-areas: 'upperBorder' 'textBox' 'buttonBox' 'lowerBorder';
+    container-type: inline-size;
+    border: 0.5cqi solid white;
+    /*box-shadow: 0px 1cqi 3cqi 0.5cqi gray;*/
+
+}
+
+#textArea {
+    grid-area: textBox; 
+    place-self: center center; 
+    font-size: 5cqi;
+    text-align: center;
+    font-family: 'Press Start 2P';
+    color: white;
+    }
+
+#borderLine {
+    width: 100cqi;
+    height: 0.7cqi;
+    background-color: white;
+    position: absolute;
+    top: 48.5%;
+}
+
+#buttonBox {
+    display: grid; 
+    grid-area: buttonBox; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-areas: 'buttonBox-Y buttonBox-N';
+    }
+
+#buttonBox-Y {
+    grid-area: buttonBox-Y; 
+    width: 42%; 
+    aspect-ratio: 1/1; 
+    place-self: center right; 
+    margin-right: 6cqi;
+    font-family: 'Press Start 2P';
+    font-size: 3.1cqi; 
+    background-color: hsl(0, 0%, 0%);
+    color: white;
+    border: 0.8cqi solid white;
+    border-radius: 0cqi;
+    transition: background-color 0.5s, border-radius 0.5s;
+    }
+#buttonBox-N {
+    grid-area: buttonBox-N; 
+    width: 42%; 
+    aspect-ratio: 1/1; 
+    place-self: center left; 
+    margin-left: 6cqi;
+    font-family: 'Press Start 2P';
+    font-size: 3.1cqi; 
+    background-color: hsl(0, 0%, 0%);
+    color: white;
+    border: 0.8cqi solid white;
+    border-radius: 0cqi;
+    transition: background-color 0.5s, border-radius 0.5s;
+}
+
+#buttonBox-Y:hover, #buttonBox-Y:active {
+    background-color: hsl(134, 97%, 40%);
+    cursor: pointer;
+    border-radius: 4cqi;
+    transition: background-color 0.5s, border-radius 0.5s;
+}
+
+#buttonBox-N:hover, #buttonBox-N:active {
+    background-color: hsl(6, 100%, 50%);
+    cursor: pointer;
+    border-radius: 4cqi;
+    transition: background-color 0.5s, border-radius 0.5s;
+}
+
+#oresNumberInputBox {
+    grid-area: buttonBox; 
+    display: none; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 2cqh;
+    
+}
+
+#oresNumberInput {
+    height: 35%; 
+    justify-self: center; 
+    width: 80%; 
+    align-self: center; 
+    font-size: 2cqi; 
+    padding-left: 3cqi;
+    background-color: transparent;
+    color: white;
+    font-family: 'Press Start 2P';
+    border: 0.5cqi solid white;
+    outline: none;
+    transition: border-radius 0.5s;
+}
+
+#oresNumberInput:hover {
+    border-radius: 25px;
+    cursor: pointer;
+    transition: border-radius 0.5s;
+}
+
+#oresNumberInput:focus {
+    border-radius: 25px;
+    cursor: text;
+    transition: border-radius 0.5s;
+}
+
+#startMiningButton {
+    width: 20%; 
+    aspect-ratio: 2/0.7; 
+    font-size: 3.4cqi;
+    padding-bottom: 0.4cqi;
+    background-color: transparent;
+    border: 0.3cqi solid white;;
+    color: white;
+    transition: background-color 0.5s, border-radius 0.5s, color 0.5s;
+}
+
+#startMiningButton:hover, #startMiningButton:active {
+    border-radius: 12px;
+    background-color: hsl(210, 100%, 100%);
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.5s, border-radius 0.5s, color 0.5s;
+}
+
+.pickaxeBox, .resumeMiningButton {
+            width: 3%;
+            aspect-ratio: 1/1;
+            position: fixed;
+            left: 97%;
+            top: 42%;
+            background-color: black;
+            border-radius: 0px;
+            cursor: pointer;
+            transition: all 1s linear;
+            overflow: hidden;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+/* Абсолютное позиционирование накладывает картинки ровно друг на друга */
+#pickaxeBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s linear; /* Плавная смена прозрачности для ОБЕИХ картинок */
+}
+
+#pickaxeWhite {
+    opacity: 1;
+}
+
+#pickaxeBlack {
+    opacity: 0;
+}
+
+#pacman, .runningPacman {
+    width: 10cqw;
+    fill: none;
+    stroke: white;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    stroke-width: 0.25cqi;
+    position: absolute;
+    z-index: 0;
+    pointer-events: none; /* Чтобы не мешал кликам по кнопкам */
+    
+}
+
+.dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 1;
+}
+
+/* Класс для плавного исчезновения */
+.dot.fade-out {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.2);
+}
