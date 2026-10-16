@@ -55,7 +55,7 @@ movePacman();
 
 // 1. PICKAXE ANIMATION
 // 2.1. Задаём элементы кирки
-const pickaxeBox = document.getElementsById('resumeMiningButtonAndPickaxeBox'); //Уже объявлет в модуле иниц. эл.
+const pickaxeBox = document.getElementById('resumeMiningButtonAndPickaxeBox'); //Уже объявлет в модуле иниц. эл.
 const pickaxeWhite = document.createElement('img');
 const pickaxeBlack = document.createElement('img');
 
